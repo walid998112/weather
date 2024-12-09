@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: url('https://images.pexels.com/photos/186980/pexels-photo-186980.jpeg?cs=srgb&dl=pexels-tahir-shaw-50609-186980.jpg&fm=jpg') no-repeat center center fixed;
+    background-size: cover;
+    transition: background 1.5s ease; /* Smooth background change */
+}
+
+/* App container */
+.app-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Header */
+header h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+    animation: slideIn 1.5s ease-out;
+}
+
+/* Form */
+#search-form {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#city-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 60%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#city-input:focus {
+    transform: scale(1.05);
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background: #FFD700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s ease;
+}
+
+button:hover {
+    background: #FFA500;
+    transform: translateY(-3px);
+}
+
+/* Weather Info */
+.weather-info {
+    margin-top: 20px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.weather-info h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+    animation: bounce 2s infinite;
+}
+
+.weather-info p {
+    font-size: 1.2em;
+    margin: 5px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Loading Spinner */
+#loading-spinner {
+    display: none;
+    margin: 20px auto;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #FFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
